@@ -50,7 +50,7 @@ export const FormulaInputs = (props) => {
                 {Object.entries(fStates).map(([k, v]) => (
                     <div key={k} className="formula-inbox">
                         <label htmlFor={k}>{k}</label>
-                        <input type="number" pattern="[0-9]*" name={k} value={v} onChange={handleInput} onFocus={e => e.target.select()} />
+                        <input type="number" inputMode="decimal" pattern="[0-9]*" name={k} value={v} onChange={handleInput} onFocus={e => e.target.select()} />
                     </div>
                 ))}
             </div>

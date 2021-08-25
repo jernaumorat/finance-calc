@@ -1,10 +1,18 @@
-import React, { useState, useReducer, ComponentState } from 'react';
+import React from 'react';
 import MathJax from 'react-mathjax';
-import { formulae, Formula } from './formulae';
+import { formulae } from './formulae';
 
 import { FormulaInputs } from './FormulaInputs'
 
 import './App.css';
+
+interface Formula {
+  ttl: string,
+  alg: Function,
+  mth: string,
+  args: string[],
+  unit: string
+}
 
 const FormulaBox = (props: Formula) => {
   return (
@@ -13,7 +21,7 @@ const FormulaBox = (props: Formula) => {
       <MathJax.Provider>
         <MathJax.Node formula={props.mth} />
       </MathJax.Provider>
-      <FormulaInputs alg={props.alg} args={props.args} />
+      <FormulaInputs alg={props.alg} args={props.args} unit={props.unit} />
     </div>
   )
 }

@@ -1,7 +1,21 @@
 import { useState, useReducer, useEffect } from 'react';
 
+const nfmt = new Intl.NumberFormat('en-AU');
+const cfmt = new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' });
+
+const formatResult = (number, unit) => {
+    switch (unit) {
+        case 'days':
+            return nfmt.format(number) + ' days';
+            break;
+        case '$':
+        default:
+            return cfmt.format(number);
+            break
+    }
+}
+
 export const FormulaInputs = (props) => {
-    let fList = []
     let initial = {}
     for (const k of props.args) {
         initial[k] = 0
@@ -20,7 +34,7 @@ export const FormulaInputs = (props) => {
     useEffect(() => {
         console.log(fStates)
         setfResult(props.alg(...Object.values(fStates)))
-    }, [fStates])
+    }, [fStates, props])
 
     return (
         <div className="formula-inputs">
@@ -30,7 +44,7 @@ export const FormulaInputs = (props) => {
                     <input type="number" pattern="[0-9]*" name={k} value={v} onChange={handleInput} onFocus={e => e.target.select()} />
                 </div>
             ))}
-            <p className="formula-result">{fResult}</p>
+            <p className="formula-result">{formatResult(fResult, props.unit)}</p>
         </div>
     )
 }

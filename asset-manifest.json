@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/finance-calc/static/css/main.031d4626.chunk.css",
-    "main.js": "/finance-calc/static/js/main.d03a1f43.chunk.js",
-    "main.js.map": "/finance-calc/static/js/main.d03a1f43.chunk.js.map",
+    "main.js": "/finance-calc/static/js/main.35b869e6.chunk.js",
+    "main.js.map": "/finance-calc/static/js/main.35b869e6.chunk.js.map",
     "runtime-main.js": "/finance-calc/static/js/runtime-main.a63a7a3f.js",
     "runtime-main.js.map": "/finance-calc/static/js/runtime-main.a63a7a3f.js.map",
     "static/js/2.6acefaf1.chunk.js": "/finance-calc/static/js/2.6acefaf1.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a63a7a3f.js",
     "static/js/2.6acefaf1.chunk.js",
     "static/css/main.031d4626.chunk.css",
-    "static/js/main.d03a1f43.chunk.js"
+    "static/js/main.35b869e6.chunk.js"
   ]
 }

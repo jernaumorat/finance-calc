@@ -44,6 +44,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "@types/react-mathjax": "^1.0.1",
+    "gh-pages": "^3.2.3",
+    "react-mathjax": "^1.0.1"
   }
 }

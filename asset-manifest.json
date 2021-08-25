@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/finance-calc/static/css/main.02089185.chunk.css",
-    "main.js": "/finance-calc/static/js/main.a5ccbfd4.chunk.js",
-    "main.js.map": "/finance-calc/static/js/main.a5ccbfd4.chunk.js.map",
+    "main.css": "/finance-calc/static/css/main.031d4626.chunk.css",
+    "main.js": "/finance-calc/static/js/main.d03a1f43.chunk.js",
+    "main.js.map": "/finance-calc/static/js/main.d03a1f43.chunk.js.map",
     "runtime-main.js": "/finance-calc/static/js/runtime-main.a63a7a3f.js",
     "runtime-main.js.map": "/finance-calc/static/js/runtime-main.a63a7a3f.js.map",
     "static/js/2.6acefaf1.chunk.js": "/finance-calc/static/js/2.6acefaf1.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.e8d91dac.chunk.js": "/finance-calc/static/js/3.e8d91dac.chunk.js",
     "static/js/3.e8d91dac.chunk.js.map": "/finance-calc/static/js/3.e8d91dac.chunk.js.map",
     "index.html": "/finance-calc/index.html",
-    "static/css/main.02089185.chunk.css.map": "/finance-calc/static/css/main.02089185.chunk.css.map",
+    "static/css/main.031d4626.chunk.css.map": "/finance-calc/static/css/main.031d4626.chunk.css.map",
     "static/js/2.6acefaf1.chunk.js.LICENSE.txt": "/finance-calc/static/js/2.6acefaf1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a63a7a3f.js",
     "static/js/2.6acefaf1.chunk.js",
-    "static/css/main.02089185.chunk.css",
-    "static/js/main.a5ccbfd4.chunk.js"
+    "static/css/main.031d4626.chunk.css",
+    "static/js/main.d03a1f43.chunk.js"
   ]
 }

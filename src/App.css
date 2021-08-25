@@ -18,6 +18,8 @@ body {
 }
 
 .Formula-Box {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   padding: 5px;
   border-radius: 5px;
@@ -29,10 +31,35 @@ body {
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
-.formula-content {}
+.Formula-Box>h2 {
+  height: 2em;
+}
+
+.formula-math {
+  min-height: 8em;
+}
+
+.formula-inputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0.5em;
+}
+
+.formula-incont {
+  flex: 1;
+}
+
+.formula-inputs>p {
+  margin-top: auto;
+  padding-top: 1em;
+  font-weight: bold;
+}
 
 .formula-inbox {
   margin: 5px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -40,7 +67,8 @@ body {
 
 .formula-inbox>label {
   flex: 1;
-  max-width: 30%;
+  text-align: left;
+  /* max-width: 50%; */
 }
 
 .formula-inbox>input {
@@ -48,5 +76,3 @@ body {
   max-height: 1em;
   max-width: 70px;
 }
-
-.formula-inputs>p {}

@@ -86,7 +86,7 @@ export const formulae = [
     {
         ttl: "Promissory Note Interest Rate",
         alg: (v, p, n) => (((v-p)/p) * (1/(n/365))),
-        mth: ``,
+        mth: `\\frac{V-P}{P} \\times \\frac{1}{n \\div 365}`,
         args: ["Present Value", "Principle", "Periods"],
         unit: "%"
     },

@@ -18,9 +18,11 @@ const FormulaBox = (props: Formula) => {
   return (
     <div className="Formula-Box">
       <h2 className="formula-content">{props.ttl}</h2>
-      <MathJax.Provider>
-        <MathJax.Node formula={props.mth} />
-      </MathJax.Provider>
+      <div className="formula-math">
+        <MathJax.Provider>
+          <MathJax.Node formula={props.mth} />
+        </MathJax.Provider>
+      </div>
       <FormulaInputs alg={props.alg} args={props.args} unit={props.unit} />
     </div>
   )

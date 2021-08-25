@@ -5,7 +5,7 @@ const pfmt = new Intl.NumberFormat('en-AU', { style: 'percent', maximumFractionD
 const cfmt = new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' });
 
 const formatResult = (number, unit) => {
-    if (number == NaN) { number = 0; }
+    if (isNaN(number)) { number = 0; }
 
     switch (unit) {
         case 'days':
@@ -41,19 +41,20 @@ export const FormulaInputs = (props) => {
     }
 
     useEffect(() => {
-        console.log(fStates)
         setfResult(props.alg(...Object.values(fStates)))
     }, [fStates, props])
 
     return (
         <div className="formula-inputs">
-            {Object.entries(fStates).map(([k, v]) => (
-                <div key={k} className="formula-inbox">
-                    <label htmlFor={k}>{k}</label>
-                    <input type="number" pattern="[0-9]*" name={k} value={v} onChange={handleInput} onFocus={e => e.target.select()} />
-                </div>
-            ))}
-            <p className="formula-result">{formatResult(fResult, props.unit)}</p>
+            <div className="formula-incont">
+                {Object.entries(fStates).map(([k, v]) => (
+                    <div key={k} className="formula-inbox">
+                        <label htmlFor={k}>{k}</label>
+                        <input type="number" pattern="[0-9]*" name={k} value={v} onChange={handleInput} onFocus={e => e.target.select()} />
+                    </div>
+                ))}
+            </div>
+            <p>{formatResult(fResult, props.unit)}</p>
         </div>
     )
 }

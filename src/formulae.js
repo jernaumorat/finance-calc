@@ -61,181 +61,181 @@ export const formulae = [
         mth: `FV_n \\times \\frac{1}{\\left(1+\\frac{i}{m}\\right)^{m\\times n}}`,
         args: ["Future Value", "Annual Interest Rate", "Compounding Periods per Year", "Years"],
         unit: "$"
+    },
+    {
+        ttl: "Effective Annual Rate of Interest (EAR)",
+        alg: (i, m) => (((1 + (i / m)) ** m) - 1),
+        mth: `\\left(1+\\frac{i}{m}\\right)-1`,
+        args: ["Interest Rate per Period", "Compounding Periods per Year"],
+        unit: "%"
+    },
+    {
+        ttl: "EAR with Continuous Compounding",
+        alg: (i) => (Math.exp(i) - 1),
+        mth: `e^i - 1`,
+        args: ["Annual Interest Rate"],
+        unit: "%"
+    },
+    {
+        ttl: "72 Rule",
+        alg: (i) => (72 / (i*100)),
+        mth: `\\frac{72}{100i}`,
+        args: ["Annual Interest Rate"],
+        unit: "years"
+    },
+    {
+        ttl: "Promissory Note Interest Rate",
+        alg: (v, p, n) => (((v-p)/p) * (1/(n/365))),
+        mth: ``,
+        args: ["Present Value", "Principle", "Periods"],
+        unit: "%"
+    },
+    {
+        ttl: "Cash Conversion Cycle",
+        alg: (inv, ard, apd) => (inv + ard - ard),
+        mth: `\\text{Inventory} + \\text{AR} - \\text{AP}`,
+        args: ["Inventory Days", "Accounts Recievable Days", "Accounts Payable Days"],
+        unit: "days"
+    },
+    {
+        ttl: "Current Ratio",
+        alg: (ass, lia) => (ass / lia),
+        mth: `\\frac{\\text{Current Assets}}{\\text{Current Liability}}`,
+        args: ["Current Assets", "Current Liability"],
+        unit: "%"
+    },
+    {
+        ttl: "Acid-test Ratio",
+        alg: (ass, inv, lia) => ((ass - inv) / lia),
+        mth: `\\frac{\\text{Current Assets} - \\text{Inventory}}{\\text{Current Liability}}`,
+        args: ["Current Assets", "Inventory", "Current Liability"],
+        unit: "%"
     },/*
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Accounts Recievable Days",
+        alg: () => (),
+        mth: ``,
+        args: ["", ""],
+        unit: "days"
+    },
+    {
+        ttl: "Accounts Receivable Turnover",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
         unit: "$"
     },
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Inventory Days",
+        alg: () => (),
+        mth: ``,
+        args: ["", ""],
+        unit: "days"
+    },
+    {
+        ttl: "Inventory Turnover",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
         unit: "$"
     },
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Accounts Payable Days Outstanding",
+        alg: () => (),
+        mth: ``,
+        args: ["", ""],
+        unit: "days"
+    },
+    {
+        ttl: "Debt Ratio",
+        alg: () => (),
+        mth: ``,
+        args: ["", ""],
+        unit: "%"
+    },
+    {
+        ttl: "Debt-to-Equity Ratio",
+        alg: () => (),
+        mth: ``,
+        args: ["", ""],
+        unit: "%"
+    },
+    {
+        ttl: "Interest Coverage Ratio",
+        alg: () => (),
+        mth: ``,
+        args: ["", ""],
+        unit: "%"
+    },
+    {
+        ttl: "Total Asset Turnover",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
         unit: "$"
     },
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Fixed Asset Turnover",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
         unit: "$"
     },
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Gross Profit Margin",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
-        unit: "$"
+        unit: "%"
     },
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Operating Profit Margin",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
-        unit: "$"
+        unit: "%"
     },
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Net Profit Margin",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
-        unit: "$"
+        unit: "%"
     },
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Return on Assets",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
-        unit: "$"
+        unit: "%"
     },
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Return on Equity",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
-        unit: "$"
+        unit: "%"
     },
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Return on Equity (DuPont Analysis)",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
-        unit: "$"
+        unit: "%"
     },
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Price-Earnings ratio",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
-        unit: "$"
+        unit: "%"
     },
     {
-        ttl: "",
-        alg: () => ( ),
+        ttl: "Market-to-Book ratio",
+        alg: () => (),
         mth: ``,
         args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
-    },
-    {
-        ttl: "",
-        alg: () => ( ),
-        mth: ``,
-        args: ["", ""],
-        unit: "$"
+        unit: "%"
     },/*
 {
         ttl: "",

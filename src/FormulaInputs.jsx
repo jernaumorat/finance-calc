@@ -1,12 +1,21 @@
 import { useState, useReducer, useEffect } from 'react';
 
-const nfmt = new Intl.NumberFormat('en-AU');
+const nfmt = new Intl.NumberFormat('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const pfmt = new Intl.NumberFormat('en-AU', { style: 'percent', maximumFractionDigits: 4 });
 const cfmt = new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' });
 
 const formatResult = (number, unit) => {
+    if (number == NaN) { number = 0; }
+
     switch (unit) {
         case 'days':
             return nfmt.format(number) + ' days';
+            break;
+        case 'years':
+            return nfmt.format(number) + ' years';
+            break;
+        case '%':
+            return pfmt.format(number);
             break;
         case '$':
         default:
